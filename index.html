@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1D-infinite-potential-well</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./asset/quantum.png" type="image/icon type">
+    
+</head>
+<body>
+    <div class="nav">
+        <!-- title and navigation -->
+        <h1>One Dimensional Infinite potential box problem</h1>
+    </div>
+    <div class="container">
+        <br><br>
+        <div class="plot_container">
+            <!-- canvas site -->
+            <svg width="500" height="300"id="plot_area"></svg>
+            <br>
+            <div class="valueXY">
+                <h4>X value:</h4>
+                <br>
+                <h4>Y value:</h4>
+            </div>
+        </div>
+        <div class="value_container">
+            <!-- all wavefunction and energy eigen value operation site  -->
+            <h3>Wave Function</h3>
+            <hr><br>
+            <img src="./asset/eqn.png" id="eqn_img" alt="equation">
+            <br>
+            <div>
+                <label for="n_val">value of n:</label>
+                <input type="number" id="n_val" name="n_val" min="1" max="100" step="1">
+            </div>
+            <br>
+            <div>
+                <label for="x_val">value of x:</label>
+                <input type="number" id="x_val" name="x_val" min="1" max="100" step="1">
+            </div>
+            <br>
+            <button type="button" id="solve_btn" onclick="updateWave()">Solve</button>
+            <br>
+            <h3>Energy Eigen Function</h3>
+            <hr><br>
+            <img src="./asset/eng_eqn.png" id="eng_img" alt="equation">
+            <br>
+            <p>m<sub>e</sub>=9.10938356 &#215; 10<sup>-31</sup></p>
+            <br>
+            <p>ℏ =1.0545718 &#215; 10<sup>-34</sup></p>
+
+            <br>
+            <div>
+                <label for="n_val">value of n:</label>
+                <input type="number" id="n_val" name="n_val" min="1" max="100" step="1">
+            </div>
+            <br>
+            <button type="button" id="solve_btn">Plot</button>
+        </div>
+        <div class="time_evolution">
+            <!-- time evolution section  -->
+            <h3>Time evolution</h3>
+            <hr>
+        </div>
+    </div>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="./d3.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
